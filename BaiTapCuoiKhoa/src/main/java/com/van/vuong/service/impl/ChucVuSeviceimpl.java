@@ -72,7 +72,7 @@ public class ChucVuSeviceimpl implements ChuVuSevice {
 	}
 
 	@Override
-	public List<ChucVu> findByNameChucVu(String tenChucVu) {
+	public ChucVu findByNameChucVu(String tenChucVu) {
 		// TODO Auto-generated method stub
 		return chucVuRepository.getByTenChucVu(tenChucVu);
 	}

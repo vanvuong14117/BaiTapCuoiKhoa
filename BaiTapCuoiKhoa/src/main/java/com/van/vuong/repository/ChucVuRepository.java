@@ -18,10 +18,10 @@ import com.van.vuong.model.ChucVu;
 @Repository
 public interface ChucVuRepository extends JpaRepository<ChucVu, Integer> {
 
-	@Query(value = "select * from chuc_vu where ten_chuc_vu like %?1%", nativeQuery = true)
-	List<ChucVu> getByTenChucVu(String searchValue);
+	@Query(value = "select * from chuc_vu where ten_chuc_vu like ?1", nativeQuery = true)
+	ChucVu getByTenChucVu(String searchValue);
 
-	@Query(value = "select * from chuc_vu where ma_chuc_vu like %?1%", nativeQuery = true)
+	@Query(value = "select * from chuc_vu where ma_chuc_vu like ?1", nativeQuery = true)
 	ChucVu getByMaChucVu(String searchValue);
 
 	@Query(value = "select count(ma_chuc_vu) from chuc_vu where ma_chuc_vu = ?1", nativeQuery = true)

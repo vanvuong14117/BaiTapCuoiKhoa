@@ -26,7 +26,7 @@ public interface ChuVuSevice {
 
 	public ChucVu findByMaChucVu(String maChucVu);
 
-	public List<ChucVu> findByNameChucVu(String maChucVu);
+	public ChucVu findByNameChucVu(String maChucVu);
 
 	public int checkInitChucVu(String maChucVu);
 

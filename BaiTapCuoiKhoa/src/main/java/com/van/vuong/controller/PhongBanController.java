@@ -36,7 +36,7 @@ public class PhongBanController {
 		return "addPhongBan";
 	}
 
-	@RequestMapping(value = { "/sauKhiAddChucVu" }, method = RequestMethod.POST)
+	@RequestMapping(value = { "/sauKhiAddPhongBan" }, method = RequestMethod.POST)
 	public String doAddPhongBan(@Valid @ModelAttribute("phongBanModelTranfer") PhongBan model, BindingResult errors) {
 		phongBanSevice.addPhongBan(model);
 		return "redirect:home";
