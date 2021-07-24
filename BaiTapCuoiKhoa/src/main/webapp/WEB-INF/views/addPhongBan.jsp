@@ -6,16 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Thêm Chuc Vu</title>
+<title>Thêm Phong Ban</title>
 </head>
 <body>
-<form method="POST" action="sauKhiAddChucVu" 
-modelAttribute="chucVuModelTranfer">
+<form method="POST" action="sauKhiAddPhongBan" 
+modelAttribute="phongBanModelTranfer">
 
-<label>Ma Chuc Vu:</label>
-<input type="text" id="machucvu" name="maChucVu"><br>
-<label>Ten Chuc Vu:</label>
-<input type="text" id="tenchucvu" name="tenChucVu"><br>
+<label>Ma Phong Ban:</label>
+<input type="text" id="maphongban" name="maPhongBan"><br>
+<label>Ten Phong Ban:</label>
+<input type="text" id="tenphongban" name="tenPhongBan"><br>
 <label>Note:</label>
 <input type="text" id="note" name="moTa"><br>
 <input type="submit" value="Save">

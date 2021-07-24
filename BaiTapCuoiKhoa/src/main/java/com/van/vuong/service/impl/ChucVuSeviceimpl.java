@@ -72,9 +72,9 @@ public class ChucVuSeviceimpl implements ChuVuSevice {
 	}
 
 	@Override
-	public List<ChucVu> findByNameChucVu(String maChucVu) {
+	public List<ChucVu> findByNameChucVu(String tenChucVu) {
 		// TODO Auto-generated method stub
-		return chucVuRepository.getByName(maChucVu);
+		return chucVuRepository.getByTenChucVu(tenChucVu);
 	}
 
 	@Override
@@ -84,6 +84,12 @@ public class ChucVuSeviceimpl implements ChuVuSevice {
 		result = chucVuRepository.checkInitByMaChucVu(maChucVu);
 		return result;
 
+	}
+
+	@Override
+	public ChucVu findByMaChucVu(String maChucVu) {
+		// TODO Auto-generated method stub
+		return chucVuRepository.getByMaChucVu(maChucVu);
 	}
 
 }

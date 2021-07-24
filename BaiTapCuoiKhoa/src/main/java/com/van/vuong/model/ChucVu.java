@@ -26,34 +26,44 @@ public class ChucVu {
 	private String maChucVu;
 	private String tenChucVu;
 	private String moTa;
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getMaChucVu() {
 		return maChucVu;
 	}
+
 	public void setMaChucVu(String maChucVu) {
 		this.maChucVu = maChucVu;
 	}
+
 	public String getTenChucVu() {
 		return tenChucVu;
 	}
+
 	public void setTenChucVu(String tenChucVu) {
 		this.tenChucVu = tenChucVu;
 	}
+
 	public String getMoTa() {
 		return moTa;
 	}
+
 	public void setMoTa(String moTa) {
 		this.moTa = moTa;
 	}
+
 	@Override
 	public String toString() {
 		return "ChucVu [id=" + id + ", maChucVu=" + maChucVu + ", tenChucVu=" + tenChucVu + ", moTa=" + moTa + "]";
 	}
+
 	public ChucVu(int id, String maChucVu, String tenChucVu, String moTa) {
 		super();
 		this.id = id;
@@ -61,10 +71,9 @@ public class ChucVu {
 		this.tenChucVu = tenChucVu;
 		this.moTa = moTa;
 	}
+
 	public ChucVu() {
 		super();
 	}
-	
-	
 
 }

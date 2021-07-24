@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import com.van.vuong.model.ChucVu;
 import com.van.vuong.model.NhanSu;
 import com.van.vuong.repository.NhanSuRepository;
 import com.van.vuong.service.NhanSuSevice;
@@ -64,6 +63,12 @@ public class NhanSuSeviceimpl implements NhanSuSevice {
 		if (StringUtils.hasText(nhanSu.getCmt())) {
 			nhanSuNew.setCmt(nhanSu.getCmt());
 		}
+		if (nhanSu.getChucVu()!= null) {
+			nhanSuNew.setChucVu(nhanSu.getChucVu());
+		}
+		if (nhanSu.getPhongBan() != null) {
+			nhanSuNew.setPhongBan(nhanSu.getPhongBan());
+		}
 		nhanSuRepository.save(nhanSuNew);
 	}
 
@@ -84,5 +89,6 @@ public class NhanSuSeviceimpl implements NhanSuSevice {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 
 }

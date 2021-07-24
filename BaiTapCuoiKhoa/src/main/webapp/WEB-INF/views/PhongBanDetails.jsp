@@ -5,12 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>Insert title here</title>
+<title>Chi tiet Phong Ban</title>
 </head>
 <body>
-<h2>id: ${user.id}</h2>
-<h2>username: ${user.userName}</h2>
-<h2>password: ${user.passWord}</h2>
+<h2>id: ${phongBan.id}</h2>
+<h2>ma phong ban: ${phongBan.maPhongBan}</h2>
+<h2>ten phong bant: ${phongBan.tenPhongBan}</h2>
+<h2>mo ta: ${phongBan.moTa}</h2>
 
 </body>
 </html>

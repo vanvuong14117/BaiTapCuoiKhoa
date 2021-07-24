@@ -11,9 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.van.vuong.model.PhongBan;
-import com.van.vuong.repository.NhanSuRepository;
 import com.van.vuong.repository.PhongBanRepository;
-import com.van.vuong.service.ChuVuSevice;
 import com.van.vuong.service.PhongBanSevice;
 
 /**
@@ -75,15 +73,21 @@ public class PhongBanSeviceimpl implements PhongBanSevice {
 	}
 
 	@Override
-	public List<PhongBan> findByNamePhongBan(String maPhongBan) {
+	public List<PhongBan> findByNamePhongBan(String tenPhongBan) {
 		// TODO Auto-generated method stub
-		return phongBanRepository.getByName(maPhongBan);
+		return phongBanRepository.getByTenPhongBan(tenPhongBan);
 	}
 
 	@Override
 	public int checkInit(String maPhongBan) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public PhongBan findByMaPhongBan(String maPhongBan) {
+		// TODO Auto-generated method stub
+		return phongBanRepository.getByMaPhongBan(maPhongBan);
 	}
 
 }
