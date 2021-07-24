@@ -14,7 +14,8 @@
 modelAttribute="chucVuEdit">
 
 <label>ID:</label>
-<input type="text" id="id" name="id" value="${chucVuEdit.id}"><br>
+
+<input type="text" id="id" name="id" value="${chucVuEdit.id}" readonly><br>
 <label>Ma Chuc Vu:</label>
 <input type="text" id="machucvu" name="maChucVu" value="${chucVuEdit.maChucVu}"><br>
 <label>Ten Chuc Vu:</label>

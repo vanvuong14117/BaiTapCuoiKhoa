@@ -13,7 +13,7 @@
 <form:form method="POST" action="/editByIdNhanSu" 
 modelAttribute="nhanSuEdit">
 <label>ID:</label>
-<input type="text" id="id" name="id" value="${nhanSuEdit.id}"><br>
+<input type="text" id="id" name="id" value="${nhanSuEdit.id}" readonly><br>
 <label>Ten Nhan Su:</label>
 <input type="text" id="ten" name="ten" value="${nhanSuEdit.ten}"><br>
 <label>Ngay Sinh:</label>

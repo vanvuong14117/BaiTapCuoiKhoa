@@ -35,7 +35,7 @@ public class ChucVuController {
 		model.addAttribute("chucVuModelTranfer", new ChucVu());
 		return "addChucVu";
 	}
-
+	@RequestMapping(value = { "/sauKhiAddChucVu" }, method = RequestMethod.POST)
 	public String doAddChucVu(@Valid @ModelAttribute("chucVuModelTranfer") ChucVu model, BindingResult errors) {
 		chuVuSevice.addChucVu(model);
 		return "redirect:home";

@@ -14,7 +14,7 @@
 modelAttribute="phongBanEdit">
 
 <label>ID:</label>
-<input type="text" id="id" name="id" value="${phongBanEdit.id}"><br>
+<input type="text" id="id" name="id" value="${phongBanEdit.id}" readonly><br>
 <label>Ma Phong Ban:</label>
 <input type="text" id="machucvu" name="maPhongBan" value="${phongBanEdit.maPhongBan}"><br>
 <label>Ten Phong Ban:</label>
