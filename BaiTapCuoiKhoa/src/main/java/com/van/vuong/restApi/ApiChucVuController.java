@@ -41,13 +41,13 @@ public class ApiChucVuController {
 	}
 
 	@GetMapping("/chucvu/{userId}")
-	public ChucVu getChucVuById(@PathVariable("userId") int id) {
-		return chuVuSevice.findByIdChucVu(id);
+	public ChucVu getChucVuById(@PathVariable("chucVuId") int chucVuId) {
+		return chuVuSevice.findByIdChucVu(chucVuId);
 	}
 
 	@GetMapping("/chucvu/param")
-	public ChucVu getChucVuByIdParam(@RequestParam(name = "userId") int id) {
-		return chuVuSevice.findByIdChucVu(id);
+	public ChucVu getChucVuByIdParam(@RequestParam(name = "chucVuId") int chucVuId) {
+		return chuVuSevice.findByIdChucVu(chucVuId);
 	}
 
 	@GetMapping("/searchMaChucVu")
@@ -69,8 +69,8 @@ public class ApiChucVuController {
 	}
 
 	@DeleteMapping("/deleteChucVu")
-	public String deleteChucVu(@RequestParam("id") int id) {
-		chuVuSevice.deleteByIdChucVu(id);
+	public String deleteChucVu(@RequestParam("chucVuId") int chucVuId) {
+		chuVuSevice.deleteByIdChucVu(chucVuId);
 		return "Success";
 	}
 

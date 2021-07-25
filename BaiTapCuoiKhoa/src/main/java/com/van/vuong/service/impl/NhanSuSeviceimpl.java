@@ -26,7 +26,6 @@ public class NhanSuSeviceimpl implements NhanSuSevice {
 
 	@Override
 	public List<NhanSu> getAllNhanSu() {
-		// TODO Auto-generated method stub
 		List<NhanSu> listNhanSu = new ArrayList<NhanSu>();
 		listNhanSu = nhanSuRepository.findAll();
 		return listNhanSu;
@@ -34,25 +33,21 @@ public class NhanSuSeviceimpl implements NhanSuSevice {
 
 	@Override
 	public NhanSu addNhanSu(NhanSu nhanSu) {
-		// TODO Auto-generated method stub
 		return nhanSuRepository.save(nhanSu);
 	}
 
 	@Override
 	public NhanSu searchNhanSu(Integer id) {
-		// TODO Auto-generated method stub
 		return nhanSuRepository.getById(id);
 	}
 
 	@Override
 	public void deleteByIdNhanSu(int id) {
-		// TODO Auto-generated method stub
 		nhanSuRepository.deleteById(id);
 	}
 
 	@Override
 	public void updateNhanSu(NhanSu nhanSu) {
-		// TODO Auto-generated method stub
 		NhanSu nhanSuNew = findByIdNhanSu(nhanSu.getId());
 		if (StringUtils.hasText(nhanSu.getTen())) {
 			nhanSuNew.setTen(nhanSu.getTen());
@@ -74,20 +69,28 @@ public class NhanSuSeviceimpl implements NhanSuSevice {
 
 	@Override
 	public NhanSu findByIdNhanSu(int id) {
-		// TODO Auto-generated method stub
 		return nhanSuRepository.findById(id).get();
 	}
 
 	@Override
 	public NhanSu findByNameNhanSu(String maNhanSu) {
-		// TODO Auto-generated method stub
 		return nhanSuRepository.getByName(maNhanSu);
 	}
 
 	@Override
 	public int checkInit(String maNhanSu) {
-		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<NhanSu> findNhanSuByChucVu(int idChucVu) {
+		
+		return nhanSuRepository.getNhanSuByPhongBan(idChucVu);
+	}
+
+	@Override
+	public List<NhanSu> findNhanSuByNamePhongBan(int idPhongBan) {
+		return nhanSuRepository.getNhanSuByPhongBan(idPhongBan);
 	}
 
 

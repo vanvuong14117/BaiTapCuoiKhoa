@@ -28,5 +28,9 @@ public interface NhanSuSevice {
 	public int checkInit(String maNhanSu);
 
 	void updateNhanSu(NhanSu nhanSu);
+	
+	public List<NhanSu> findNhanSuByChucVu(int idChucVu);
+	
+	public List<NhanSu> findNhanSuByNamePhongBan(int idPhongBan);
 
 }
