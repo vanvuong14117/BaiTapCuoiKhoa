@@ -14,15 +14,15 @@ import com.van.vuong.model.ChucVu;
 public interface ChuVuSevice {
 	public List<ChucVu> getAllChucVu();
 
-	public ChucVu addChucVu(ChucVu chucvu);
+	public ChucVu addChucVu(ChucVu chucVu);
 
-	public ChucVu searchChucVu(Integer id);
+	public ChucVu searchChucVu(Integer idChucvu);
 
-	public void deleteByIdChucVu(int id);
+	public void deleteByIdChucVu(int idChucvu);
 
-	public void updateChucVu(ChucVu chucvu);
+	public void updateChucVu(ChucVu chucVu);
 
-	public ChucVu findByIdChucVu(int id);
+	public ChucVu findByIdChucVu(int idChucvu);
 
 	public ChucVu findByMaChucVu(String maChucVu);
 

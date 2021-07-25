@@ -18,10 +18,10 @@ import com.van.vuong.model.PhongBan;
 @Repository
 public interface PhongBanRepository extends JpaRepository<PhongBan, Integer> {
 
-	@Query(value = "select * from phong_ban where ten_phong_ban like %?1%", nativeQuery = true)
-	List<PhongBan> getByTenPhongBan(String searchValue);
+	@Query(value = "select * from phong_ban where ten_phong_ban like ?1", nativeQuery = true)
+	PhongBan getByTenPhongBan(String searchValue);
 
-	@Query(value = "select * from phong_ban where ma_phong_ban like %?1%", nativeQuery = true)
+	@Query(value = "select * from phong_ban where ma_phong_ban like ?1", nativeQuery = true)
 	PhongBan getByMaPhongBan(String searchValue);
 
 	@Query(value = "select count(ma_phong_ban) from phong_ban where ma_phong_ban = ?1", nativeQuery = true)

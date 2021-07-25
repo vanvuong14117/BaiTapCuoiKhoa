@@ -35,23 +35,23 @@ public class ApiChucVuController {
 	ChuVuSevice chuVuSevice;
 
 	@GetMapping("/getAllChucVu")
-	public List<ChucVu> getAllUser() {
+	public List<ChucVu> getAllChucVu() {
 		List<ChucVu> chucVu = chuVuSevice.getAllChucVu();
 		return chucVu;
 	}
 
 	@GetMapping("/chucvu/{userId}")
-	public ChucVu getUserById(@PathVariable("userId") int id) {
+	public ChucVu getChucVuById(@PathVariable("userId") int id) {
 		return chuVuSevice.findByIdChucVu(id);
 	}
 
 	@GetMapping("/chucvu/param")
-	public ChucVu getUserByIdParam(@RequestParam(name = "userId") int id) {
+	public ChucVu getChucVuByIdParam(@RequestParam(name = "userId") int id) {
 		return chuVuSevice.findByIdChucVu(id);
 	}
 
 	@GetMapping("/searchMaChucVu")
-	public ResponseEntity<ChucVu> searchUser(@RequestParam(name = "chucVuSearch") String maChucVu) {
+	public ResponseEntity<ChucVu> searchChucVu(@RequestParam(name = "chucVuSearch") String maChucVu) {
 		ChucVu chucVu = new ChucVu();
 		if (StringUtils.hasText(maChucVu)) {
 			chucVu = chuVuSevice.findByMaChucVu(maChucVu);
@@ -69,13 +69,13 @@ public class ApiChucVuController {
 	}
 
 	@DeleteMapping("/deleteChucVu")
-	public String deleteUser(@RequestParam("id") int id) {
+	public String deleteChucVu(@RequestParam("id") int id) {
 		chuVuSevice.deleteByIdChucVu(id);
 		return "Success";
 	}
 
 	@PutMapping("/updateChucVu")
-	public String updateUser(@RequestBody ChucVu chucVu) {
+	public String updateChucVu(@RequestBody ChucVu chucVu) {
 		ChucVu newChucVu = chucVu;
 		if (chucVu != null) {
 			chuVuSevice.updateChucVu(newChucVu);

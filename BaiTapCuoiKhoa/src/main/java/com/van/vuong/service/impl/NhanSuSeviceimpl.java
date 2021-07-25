@@ -79,7 +79,7 @@ public class NhanSuSeviceimpl implements NhanSuSevice {
 	}
 
 	@Override
-	public List<NhanSu> findByNameNhanSu(String maNhanSu) {
+	public NhanSu findByNameNhanSu(String maNhanSu) {
 		// TODO Auto-generated method stub
 		return nhanSuRepository.getByName(maNhanSu);
 	}

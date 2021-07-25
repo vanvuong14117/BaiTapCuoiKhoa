@@ -26,7 +26,7 @@ public interface PhongBanSevice {
 
 	public PhongBan findByMaPhongBan(String maPhongBan);
 
-	public List<PhongBan> findByNamePhongBan(String maPhongBan);
+	public PhongBan findByNamePhongBan(String maPhongBan);
 
 	public int checkInit(String maPhongBan);
 

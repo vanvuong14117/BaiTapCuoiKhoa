@@ -64,6 +64,7 @@ public class PhongBanSeviceimpl implements PhongBanSevice {
 		if (StringUtils.hasText(phongBan.getMoTa())) {
 			phongBanNew.setMoTa(phongBan.getMoTa());
 		}
+		phongBanRepository.save(phongBanNew);
 	}
 
 	@Override
@@ -73,7 +74,7 @@ public class PhongBanSeviceimpl implements PhongBanSevice {
 	}
 
 	@Override
-	public List<PhongBan> findByNamePhongBan(String tenPhongBan) {
+	public PhongBan findByNamePhongBan(String tenPhongBan) {
 		// TODO Auto-generated method stub
 		return phongBanRepository.getByTenPhongBan(tenPhongBan);
 	}

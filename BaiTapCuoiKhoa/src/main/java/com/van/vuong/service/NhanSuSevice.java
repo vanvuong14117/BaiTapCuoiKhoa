@@ -23,7 +23,7 @@ public interface NhanSuSevice {
 
 	public NhanSu findByIdNhanSu(int id);
 
-	public List<NhanSu> findByNameNhanSu(String maNhanSu);
+	public NhanSu findByNameNhanSu(String maNhanSu);
 
 	public int checkInit(String maNhanSu);
 
